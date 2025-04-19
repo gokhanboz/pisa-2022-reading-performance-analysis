@@ -163,5 +163,6 @@ plots/Aidiyet_Duygusu_ile_Okuma_Basarısi.png: Aidiyet hissi ile başarı ilişk
 plots/Artıklar.png, Artıkların_Histogramı.png, Artıkların_Normalligi.png: Artık analizi grafikleri
 
 Hazırlayan / Author: Gökhan Boz
+
 Tarih / Date: 2025
 
