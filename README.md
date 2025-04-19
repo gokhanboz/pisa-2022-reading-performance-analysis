@@ -165,17 +165,3 @@ plots/Artıklar.png, Artıkların_Histogramı.png, Artıkların_Normalligi.png: 
 Hazırlayan / Author: Gökhan Boz
 Tarih / Date: 2025
 
-library(mitools)  # Tüm PV’ler ile analiz için
-
-📊 Görselleştirmeler
-plots/Kitap_Sayisi_ile_Okuma_Basarısi.png: Kitap sayısı ve başarı ilişkisi
-
-plots/Cinsiyete_Gore_Okuma_Basarısi.jpg: Cinsiyete göre başarı farkı
-
-plots/Aidiyet_Duygusu_ile_Okuma_Basarısi.png: Aidiyet hissi ve başarı
-
-plots/Artıklar.png, Artıkların_Histogramı.png, Artıkların_Normalligi.png: Regresyon artık analizleri
-
-Hazırlayan / Author: Gökhan Boz
-Tarih / Date: 2025
-
