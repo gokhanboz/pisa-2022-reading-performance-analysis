@@ -1,85 +1,104 @@
+📘 PISA 2022 Reading Performance Analysis (Turkey)
 
-# 📘 PISA 2022 Reading Performance Analysis (Turkey)
-
-> 📌 **Aşağıda Türkçe açıklama da mevcuttur**
+📌 Aşağıda Türkçe açıklama da mevcuttur
 
 This project analyzes the factors influencing Turkish students' reading achievement using the PISA 2022 dataset.
 
-## 📁 Contents
+📁 Contents
 
-- **Data Import**: PISA .sav files were loaded using the `haven` package.
-- **Data Cleaning and Sampling**: Stratified sampling was conducted using the `sampling` package.
-- **Explanatory Variables**:
-  - Number of books (reverse-coded)
-  - Parental education (mother and father)
-  - Gender and school type
-  - Psychological indicators: sense of belonging, safety perception, math anxiety
-- **Statistical Analyses**:
-  - Simple and multiple linear regression models
-  - t-tests
-  - Correlation matrix and visualizations
+Data Import: PISA .sav files were loaded using the haven package.
 
-## 📦 Packages Used
+Data Cleaning and Sampling: Stratified sampling was conducted using the sampling package.
 
-```r
+Explanatory Variables:
+
+Number of books (reverse-coded)
+
+Parental education (mother and father)
+
+Gender and school type
+
+Psychological indicators: sense of belonging, safety perception, math anxiety
+
+Statistical Analyses:
+
+Simple and multiple linear regression models (with multiple imputation for plausible values)
+
+t-tests
+
+Correlation matrix and visualizations
+
+📦 Packages Used
+
 library(haven)
 library(dplyr)
 library(ggplot2)
 library(corrplot)
 library(sampling)
-```
+library(mitools)  # for combining multiple plausible values
 
-## 📊 Visualizations
+📊 Visualizations
 
 The following plots are provided to support the findings:
 
-- `plots/Kitap_Sayisi_ile_Okuma_Basarısi.png`: Book availability vs reading performance
-- `plots/Cinsiyete_Gore_Okuma_Basarısi.jpg`: Gender-based reading performance
-- `plots/Aidiyet_Duygusu_ile_Okuma_Basarısi.png`: Belonging and academic success
-- `plots/Artıklar.png`, `Artıkların_Histogramı.png`, `Artıkların_Normalligi.png`: Residual diagnostics
+plots/Kitap_Sayisi_ile_Okuma_Basarısi.png: Book availability vs reading performance
 
-## ▶️ Running the Project
+plots/Cinsiyete_Gore_Okuma_Basarısi.jpg: Gender-based reading performance
 
-Use the provided `pisa_cleaned_script.R` script to run the full analysis step by step in R or RStudio.
+plots/Aidiyet_Duygusu_ile_Okuma_Basarısi.png: Belonging and academic success
 
----
+plots/Artıklar.png, Artıkların_Histogramı.png, Artıkların_Normalligi.png: Residual diagnostics
 
-## 📌 Türkçe Açıklama
+▶️ Running the Project
+
+Use the provided pisa_cleaned_script.R script to run the full analysis step by step in R or RStudio.
+
+📌 Türkçe Açıklama
 
 Bu proje, PISA 2022 veri seti kullanılarak Türkiye'deki öğrencilerin okuma başarıları üzerinde çeşitli değişkenlerin etkilerini incelemektedir.
 
-### 📁 İçerik
+📁 İçerik
 
-- **Veri Yükleme**: SPSS (.sav) formatındaki PISA verisi `haven` paketi ile yüklenmiştir.
-- **Veri Temizliği ve Örnekleme**: Tabakalı örnekleme (`sampling` paketi) uygulanmıştır.
-- **Açıklayıcı Değişkenler**:
-  - Kitap sayısı (ters kodlanmış)
-  - Anne ve baba eğitim düzeyi
-  - Cinsiyet ve okul türü
-  - Psikolojik değişkenler: Aidiyet duygusu, güvenlik algısı, matematik kaygısı
-- **İstatistiksel Analizler**:
-  - Basit ve çoklu regresyon modelleri
-  - t-testleri
-  - Korelasyon matrisi ve görselleştirmeler
+Veri Yükleme: SPSS (.sav) formatındaki PISA verisi haven paketi ile yüklenmiştir.
 
-### 📦 Kullanılan Paketler
+Veri Temizliği ve Örnekleme: Tabakalı örnekleme (sampling paketi) uygulanmıştır.
 
-```r
+Açıklayıcı Değişkenler:
+
+Kitap sayısı (ters kodlanmış)
+
+Anne ve baba eğitim düzeyi
+
+Cinsiyet ve okul türü
+
+Psikolojik değişkenler: Aidiyet duygusu, güvenlik algısı, matematik kaygısı
+
+İstatistiksel Analizler:
+
+Basit ve çoklu regresyon modelleri (tüm plausible value'lar ile çoklu imputasyon kullanılarak)
+
+t-testleri
+
+Korelasyon matrisi ve görselleştirmeler
+
+📦 Kullanılan Paketler
+
 library(haven)
 library(dplyr)
 library(ggplot2)
 library(corrplot)
 library(sampling)
-```
+library(mitools)  # çoklu plausible value analizi için
 
-### 📊 Görselleştirmeler
+📊 Görselleştirmeler
 
-- `plots/Kitap_Sayisi_ile_Okuma_Basarısi.png`: Kitap sayısı ile başarı ilişkisi
-- `plots/Cinsiyete_Gore_Okuma_Basarısi.jpg`: Cinsiyete göre başarı karşılaştırması
-- `plots/Aidiyet_Duygusu_ile_Okuma_Basarısi.png`: Aidiyet hissi ile başarı ilişkisi
-- `plots/Artıklar.png`, `Artıkların_Histogramı.png`, `Artıkların_Normalligi.png`: Artık analizi grafikleri
+plots/Kitap_Sayisi_ile_Okuma_Basarısi.png: Kitap sayısı ile başarı ilişkisi
 
----
+plots/Cinsiyete_Gore_Okuma_Basarısi.jpg: Cinsiyete göre başarı karşılaştırması
 
-**Hazırlayan / Author:** Gökhan Boz  
-**Tarih / Date:** 2025
+plots/Aidiyet_Duygusu_ile_Okuma_Basarısi.png: Aidiyet hissi ile başarı ilişkisi
+
+plots/Artıklar.png, Artıkların_Histogramı.png, Artıkların_Normalligi.png: Artık analizi grafikleri
+
+Hazırlayan / Author: Gökhan Boz
+Tarih / Date: 2025
