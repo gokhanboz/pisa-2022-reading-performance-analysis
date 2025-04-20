@@ -32,20 +32,31 @@ Correlation matrix and visualizations
 📦 Packages Used
 
 library(haven)
+
 library(dplyr)
+
 library(ggplot2)
+
 library(corrplot)
+
 library(sampling)
-library(mitools)  # for combining multiple plausible values
+
+library(mitools) # for combining multiple plausible values
+
 library(mitools)  # For plausible value analysis
 
 📊 Visualizations
 The following plots are included:
 plots/Kitap_Sayisi_ile_Okuma_Basarısi.png: Book access vs reading score
+
 plots/Kitap_Sayisi_ile_Okuma_Basarısi.png: Book availability vs reading performance
+
 plots/Cinsiyete_Gore_Okuma_Basarısi.jpg: Gender-based reading performance
+
 plots/Aidiyet_Duygusu_ile_Okuma_Basarısi.png: Belonging and academic success
+
 plots/Artıklar.png, Artıkların_Histogramı.png, Artıkların_Normalligi.png: Residual diagnostics
+
 
 ▶️ Running the Project
 Use the provided pisa_cleaned_script.R script to run the full analysis step by step in R or RStudio.
