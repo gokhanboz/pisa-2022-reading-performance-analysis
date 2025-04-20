@@ -19,15 +19,6 @@ Data Import: PISA .sav files were loaded using the haven package.
   - Correlation matrix, t-tests, and diagnostic plots
 
 ---
-Explanatory Variables:
-Number of books (reverse-coded)
-Parental education (mother and father)
-Gender and school type
-Psychological indicators: sense of belonging, safety perception, math anxiety
-Statistical Analyses:
-Simple and multiple linear regression models (with multiple imputation for plausible values)
-t-tests
-Correlation matrix and visualizations
 
 📦 Packages Used
 
@@ -57,13 +48,10 @@ plots/Aidiyet_Duygusu_ile_Okuma_Basarısi.png: Belonging and academic success
 
 plots/Artıklar.png, Artıkların_Histogramı.png, Artıkların_Normalligi.png: Residual diagnostics
 
-
-▶️ Running the Project
-Use the provided pisa_cleaned_script.R script to run the full analysis step by step in R or RStudio.
-
 ▶️ How to Run the Project
 Run the pisa_cleaned_script.R script in R or RStudio to reproduce the full analysis step-by-step.
 
 Author: Gökhan Boz
+
 Date: 2025
 
