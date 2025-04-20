@@ -4,8 +4,6 @@ This project analyzes the socio-economic and emotional factors affecting Turkish
 
 📁 Contents
 
-Data Import: PISA .sav files were loaded using the haven package.
-
 - **Data Import**: Loaded PISA `.sav` files using the `haven` package.
 - **Explanatory Variables**:
   - Number of books at home (reverse-coded)
