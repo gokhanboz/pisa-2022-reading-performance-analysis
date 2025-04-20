@@ -21,16 +21,11 @@ turkey_selected <- turkey_data %>%
   select(PV1READ, ST004D01T, ST005Q01JA, ST006Q01JA, ST006Q02JA, ST022Q01TA, STRATUM,
          BELONG, FEELSAFE, ANXMAT, FEELLAH)
 
-# 5. TABAKALI ÖRNEKLEME UYGULAMASI
-cleaned_data <- turkey_selected %>%
-  filter(!is.na(ST004D01T), !is.na(ST022Q01TA)) %>%
-  mutate(stratum = interaction(ST004D01T, ST022Q01TA))
-
-set.seed(123)
-orneklem_plan <- strata(cleaned_data, stratanames = "stratum", 
-                        size = rep(30, length(unique(cleaned_data$stratum))), 
-                        method = "srswor")
-sample_data <- getdata(cleaned_data, orneklem_plan)
+# 5. EKSİK GÖZLEMLERİ TEMİZLENMESİ
+sample_data <- turkey_selected %>%
+  filter(!is.na(PV1READ), !is.na(ST004D01T), !is.na(ST005Q01JA),
+         !is.na(ST006Q01JA), !is.na(ST006Q02JA), !is.na(ST022Q01TA),
+         !is.na(BELONG), !is.na(FEELSAFE), !is.na(ANXMAT), !is.na(FEELLAH))
 
 # 6. DEĞİŞKEN DÖNÜŞÜMLERİ
 sample_data <- sample_data %>%
